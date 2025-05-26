@@ -6,7 +6,6 @@ class Node:
 
 
 class LinkedList:
-  
     def __init__(self):
         self.head = None
         self.tail = None
@@ -40,13 +39,13 @@ class LinkedList:
             return
         current_node = self.head
         index_counter = 0
-        while index_counter < index:               
+        while index_counter < index:
             index_counter += 1
             current_node = current_node.next_item
             if current_node is None:
                 return
         return current_node.value
-            
+
     def remove(self, index):
         if self.head is None:
             return
@@ -55,7 +54,7 @@ class LinkedList:
             self.head = self.head.next_item
         else:
             index_counter = 0
-            while index_counter < index:               
+            while index_counter < index:
                 index_counter += 1
                 previous_node = current_node
                 current_node = current_node.next_item
